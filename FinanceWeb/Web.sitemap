@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0"  >
+
+ <siteMapNode url="~/Default.aspx" title="Home" description="Financial Division Home Page" > 
+    <!-- Departments Node-->
+    <!--<siteMapNode url="~/Departments/Departments.aspx" title="Departments" description="Departments" >
+      <siteMapNode url="~/Departments/FinancialSystemsIntegration.aspx" title ="FSI" description ="Financial Systems Intengration" >
+      </siteMapNode>
+    </siteMapNode>--> 
+  
+    <!--References Node-->
+     <siteMapNode  title="Reference" description ="Reference" roles="*"   >
+       <!--<siteMapNode url="~/References/BoardBooks.aspx" title="Board Books" description="Board Books (RESTRICTED ACCESS)" runat="server" ></siteMapNode>-->
+       <!--<siteMapNode url="~/References/DataDictionary/DictionaryEditor3.aspx" title="Data Dictionary" description="Data Dictionary" runat="server" roles="FSI User" ></siteMapNode>-->
+       <siteMapNode url="~/References/NZ_DataDictionary/Netezza Data Dictionary.aspx" title="Netezza Data Dictionary" description="Netezza Data Dictionary" runat="server" roles="FSI User"></siteMapNode>
+       <!--<siteMapNode url="~/References/EducationMaterial.aspx" title="Education Materials" description="Presentations, Training Material, etc... " runat="server"></siteMapNode>
+       <siteMapNode url="~/References/NorthsideForms.aspx" title="Northside Forms" description="Oranization forms " runat="server"></siteMapNode>-->
+
+       <!--<siteMapNode url="~/References/DataDictionary/DictionaryEditor.aspx" title="Data Dictionary" description="Data Dictionary" runat="server"  roles="FSI User"></siteMapNode>-->
+       <!--<siteMapNode url ="~/References/FDLookupTables.aspx" title="DWH Lookups" description="Developer"></siteMapNode>-->       
+       <!--<siteMapNode url="~/References/DataDictionary/DataDictionary.aspx" title="Search Data Dictionary" description="Search Data Dictionary" runat="server" roles="FSI User" ></siteMapNode>-->
+       <!--<siteMapNode url="~/References/DataDictionary/DataDictionaryNew.aspx" title="Search Data Dictionary" description="Search Data Dictionary" runat="server" roles="FSI User" ></siteMapNode>-->
+       <siteMapNode url="http://ssrs.northside.local/Reports/Pages/Folder.aspx" title="SSRS Reports" description="SQL Server Reporting Services (ACCESS RESTRICTED)" runat="server" roles ="*" ></siteMapNode>
+       <siteMapNode url="https://spotfireweb.northside.local" title="Spotfire" description="Spotfire Analytics" roles="*" ></siteMapNode>
+    </siteMapNode>
+      
+   <siteMapNode  title ="Tools" description ="All available Finance Web tools" runat="server" roles="*"   >
+     <!--<siteMapNode url ="~/Tools/FSIUsers/DRGUpdates.aspx" title="DRG Updates" description="Annual MS DRG update tool" roles="FSI User"></siteMapNode> 
+     <siteMapNode url="~/Tools/LookupTables/FDLookupTableEditor.aspx" title="LU Editor" description ="Look up Table Editor" roles="Developer"></siteMapNode>
+     <siteMapNode url ="~/Tools/FSIUsers/ProjectInventory.aspx" title="Project Inventory" description="Project Inventory" roles="FSI User"></siteMapNode>-->
+     <siteMapNode url ="~/Tools/StarGLSubitems/StarGLBalancing.aspx" title="Star/GL Balancing" description="Star/GL Balancing Tool" roles="StarGL"></siteMapNode>
+     <siteMapNode url="~/Tools/Administrative/ManageUsers.aspx" title="Administrative" description ="Administrative Tools" roles="Developer"></siteMapNode>
+     <siteMapNode url="~/Tools/AR/Activity_Report.aspx" title="AR Activity Report" description ="AR Daily Activity" roles="ARActivityReport"></siteMapNode>
+     <siteMapNode url="~/Tools/AR_GECC/Activity Report.aspx" title="AR GECC Activity Report" description ="AR Daily Activity" roles="AR_GECC"></siteMapNode>
+     <siteMapNode url="~/Tools/CathLabMapping/CathLabMapping.aspx" title="Cath Lab Mapping" description ="CathLab" runat="server"  ></siteMapNode>
+     <!--<siteMapNode url="~/Tools/EncounterFlags/EncounterLogic.aspx" title="MPA Flag Logic" description ="Flag Logic" runat="server" roles="FlagAdmin" ></siteMapNode>-->	   
+     <siteMapNode url="~/Tools/ENT/ENTDataEntry.aspx" title="ENT Administrative" description ="ENT Codes Data Entry" runat="server" roles="Developer" ></siteMapNode>
+     <siteMapNode url="~/Tools/ErrorTracking/ErrorTracking.aspx" title="Error Tracking" description ="Website Error Tracking" roles="Developer"></siteMapNode>
+	   <siteMapNode url="~/Tools/MediaCenter/MediaCenter.aspx" title="Media Center" description ="Videos" roles="OHMS"></siteMapNode>
+     <siteMapNode url="~/Tools/MD/udMDPOSDescriptionMapping.aspx" title="MD POS Mapping" description ="MD POS Mapping" runat="server" roles="MDPOSMapper" />
+     <siteMapNode url="~/Tools/MD/POS Desc/MD POS Desc Mapping.aspx" title="MD POS - VolTypes " description ="MD POS VolTypes" runat="server" roles="MDPOS_New" />
+     <siteMapNode url="~/Tools/MD/PFOGroupMapping.aspx" title="MD PFO Mapping" description ="MD PFO Group Mapping" runat="server" roles="FSI User" />
+     <siteMapNode url="~/Tools/Accounting/Galen MQ Allocation/Medquest Allocation.aspx" title="MQ Allocation" description ="WF Galen MQ Allocation" runat="server" roles="GalenMQAlloc" />
+	   <siteMapNode url="~/Scorecard/OHMSDataEntry.aspx" title="OHMS Data Entry" description ="OHMS Data Entry Tool" runat="server" roles="OHMS" ></siteMapNode>
+     
+     <siteMapNode url="~/Scorecard/OHMSRADDataEntry.aspx" title="RAD Data Entry" description ="RAD - OHMS Data Entry Tool Tool" runat="server" roles="OHMS" ></siteMapNode>
+     <siteMapNode url="~/Tools/AR_PhysPract/PP Activity Report.aspx" title="PP AR Activity Report" description ="PP AR Daily Activity" roles="PP_ARActivityReport"></siteMapNode>
+     <siteMapNode url="~/Tools/RadOHMS/RadOHMS_Administrative.aspx" title="Rad OHMS Administrative" description ="Administrative tools for Radiology OHMS" runat="server" roles="OHMS" ></siteMapNode>
+     <siteMapNode url="~/Tools/Rehab/OHMS/Rehab OHMS Data Entry.aspx" title="Rehab OHMS Data Entry" description ="OHMS Data Entry Tool" runat="server" roles="RehabOHMS" ></siteMapNode>
+     <siteMapNode url="~/Tools/Accounting/Suntrust Allocation/Suntrust Allocation.aspx" title="Suntrust Allocation" description ="Suntrust Allocation" runat="server" roles="SuntrustAlloc" />
+     <siteMapNode url="~/Tools/Surgery/Surgery_TOT_DataEntry.aspx" title="Surg TOT Data Entry" description ="Surgery TOT Data Entry Tool" runat="server" roles="SurgTOT" ></siteMapNode>
+     
+     <siteMapNode url="~/References/AddressGeoCoding/AddressGeoCoding.aspx" title="AddressGeoCoding" description="AddressGeoCoding" runat="server" roles="FSI User"></siteMapNode>
+     <siteMapNode url="~/Tools/Census/CensusDataEntry.aspx" title="Census Data Entry" description ="Census Data Entry" runat="server"  ></siteMapNode>
+     <!--<siteMapNode url="~/Tools/CompassReplacement/CompassReplacement.aspx" title="(DEMO)" description ="ABC Replacement Tool" roles="Developer"></siteMapNode>-->
+	   <!--<siteMapNode url="~/Tools/OHMS/OHMSAdmin/OHMS.aspx" title="OHMS Admin" description ="Organization Health Monitoring System" runat="server" roles ="OHMS" >
+		
+		   <siteMapNode url="~/Tools/Reports/WebForm2.aspx" title="Tableau Test" description ="OHMS Test Admin" runat="server" roles ="OHMS" > </siteMapNode>
+		   </siteMapNode>
+	   <siteMapNode url="~/Tools/OHMS/OHMS_NewMetric.aspx" title="OHMS New Metric" description ="Organization Health Monitoring System New Metrics" runat="server" roles ="*"></siteMapNode>-->
+     <siteMapNode url="~/Tools/ManagedCare/Profee/ProFee.aspx" title="Profee" description ="Managed Care Profee schedule updater" runat="server" roles="Profee" ></siteMapNode>
+     <siteMapNode url="~/Tools/VendorContracts/LESCOR.aspx" title="LESCOR" description="Legal Services Contract Review System" runat="server" roles="VendorContracts"></siteMapNode>
+     <siteMapNode url="~/Tools/LookupTables/LookupTableEditor.aspx" title="Table Editor" description ="Look up Table Editor" roles="FSI User"></siteMapNode>
+     <siteMapNode url="~/Tools/WellsFargo/WF_Merchant_Mapping.aspx" title="WF Mapping" description ="WF Mapping" runat="server" roles="WF_Mapping" ></siteMapNode>
+     <siteMapNode url="~/Tools/WellsFargo/WFPPS.aspx" title="WF PPS" description ="WF PPS" runat="server" roles="WFPPS" ></siteMapNode>
+     <siteMapNode url="~/Tools/ACR_Mammo/FDA Mammo Image Review.aspx" title="FDA Mammo Image Review" description ="FDA Mammo Image Review" runat="server" roles="Developer" ></siteMapNode>
+     <!--<siteMapNode url="~/Tools/PPM/PhysicianPracticeManagementMapping.aspx" title="PPM Mapping" description ="Physician Practice Management Mapping" runat="server" roles="Developer" ></siteMapNode>-->
+     
+     <siteMapNode url="~/Tools/StarDeptMapping/StarDeptMapping.aspx" title="STAR Dept Mapping" description ="STAR Dept Mapping" runat="server" roles="Developer" ></siteMapNode>
+     
+     <!--<siteMapNode url="~/Tools/TESTING_FOLDER/TestingFolder_Disclamer.aspx" title="Testing Folder" description ="Developer Testing Folder" runat="server" roles="Developer"  >
+     <siteMapNode url="~/Tools/TESTING_FOLDER/ActiveDirectoryTool.aspx" title="AD Test" description ="Active Directory Tool" runat="server" roles="Developer" ></siteMapNode>
+
+     <siteMapNode url="~/Tools/WellsFargo/WFPPS.aspx" title="WF PPS" description ="WF PPS" runat="server" roles="Developer" ></siteMapNode>
+     <siteMapNode url="~/FinanceHelpDesk/financehelpdesk.aspx" title="Help Desk" description ="Finance Help Desk" runat="server" roles="Developer" ></siteMapNode>
+       <siteMapNode url="~/Tools/FSIUsers/Radiology/RadiologyUpload.aspx" title="Rad Upload Test" description ="Radiology Upload Tool" runat="server" roles="Developer" ></siteMapNode>
+     <siteMapNode url="~/Tools/OHMS/OHMSAdmin/OHMSAdmin.aspx" title="OHMS Update" description ="OHMS Test Admin" runat="server" roles ="Developer" > </siteMapNode>-->
+     
+
+
+   </siteMapNode>
+   
+      <!--<siteMapNode url="~/FRED/FREDHQ/FRED.aspx" title ="FRED" description ="FRED - Financial Repository of Encounter Data" roles="FRED" >-->
+     <!--<siteMapNode url="~/FRED/FRED.aspx" title ="FRED" description ="FRED - Financial Repository of Encounter Data" roles="FRED" >-->
+     <!--<siteMapNode url="~/FRED/FREDMQ/FREDMQ.aspx" title ="FREDMQ" description ="FRED MQ - Financial Repository of Encounter Data (MPA)" roles="FRED" ></siteMapNode>-->
+     <!--<siteMapNode url="~/FRED/FREDAdmin/FREDAdmin.aspx" title ="FREDAdmin" description ="Administrative Tools" roles="FREDAdmin" ></siteMapNode>-->
+ <!--</siteMapNode>-->
+  
+  </siteMapNode> 
+  
+ </siteMap>
+
+ 

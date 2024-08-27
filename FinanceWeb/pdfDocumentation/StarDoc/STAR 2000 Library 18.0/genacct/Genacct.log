@@ -1,0 +1,31 @@
+6/29/2012 2:56:54 PM : Starting purge of Index : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\genacct\Genacct.pdx
+6/29/2012 2:56:54 PM : Deleting files from current index
+6/29/2012 2:56:54 PM : Deleting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\genacct\Genacct\index.idx
+6/29/2012 2:56:54 PM : Deleting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\genacct\Genacct\index1.idx
+6/29/2012 2:56:54 PM : Index purge successful
+
+6/29/2012 2:57:57 PM : Starting build of Index : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\genacct\Genacct.pdx
+6/29/2012 2:57:58 PM : Searching : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\genacct\
+6/29/2012 2:59:09 PM : Indexing 14 files
+6/29/2012 2:59:11 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\genacct\Gaappman.pdf
+6/29/2012 3:00:17 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\genacct\Gammrep.pdf
+6/29/2012 3:01:47 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\genacct\Gapprep.pdf
+6/29/2012 3:03:37 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\genacct\Gapaytab.pdf
+6/29/2012 3:06:06 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\genacct\Gappvol.pdf
+6/29/2012 3:07:59 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\genacct\Gappws.pdf
+6/29/2012 3:08:12 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\genacct\Gabackup.pdf
+6/29/2012 3:08:14 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\genacct\Gammws.pdf
+6/29/2012 3:08:21 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\genacct\Gammvol.pdf
+6/29/2012 3:09:45 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\genacct\Gageninf.pdf
+6/29/2012 3:09:52 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\genacct\Gaglws.pdf
+6/29/2012 3:09:59 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\genacct\Gaglvol.pdf
+6/29/2012 3:11:09 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\genacct\Gaes.pdf
+6/29/2012 3:11:15 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\genacct\Gaaccpay.pdf
+6/29/2012 3:12:53 PM : Creating Index
+6/29/2012 3:26:49 PM :   Total PDF files in all directories : 14
+6/29/2012 3:26:50 PM :   Total PDF attachments : 0
+6/29/2012 3:26:50 PM :   Total new files : 14
+6/29/2012 3:26:50 PM :   Total pages indexed : 5288
+6/29/2012 3:26:50 PM :   Total number of files skipped : 0
+6/29/2012 3:26:50 PM :   Total deleted files : 0
+6/29/2012 3:26:50 PM : Index build successful.

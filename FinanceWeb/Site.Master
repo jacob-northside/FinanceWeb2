@@ -1,0 +1,198 @@
+﻿<%@ Master Language="VB" AutoEventWireup="true" CodeBehind="Site.master.vb" Inherits="FinanceWeb.SiteMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+
+   
+    <title><%: Page.Title %> - Northside Hospital Finance Web</title>
+    <asp:PlaceHolder runat="server">        
+     <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" /> 
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=8,9,10, Edge" />
+      <script type="text/javascript">
+          function cancelBack() {
+              if ((event.keyCode == 8 ||
+             (event.keyCode == 37 && event.altKey) ||
+             (event.keyCode == 39 && event.altKey))
+              &&
+             (event.srcElement.form == null || event.srcElement.isTextEdit == false)
+            ) {
+                  event.cancelBubble = true;
+                  event.returnValue = false;
+              }
+          }
+
+    </script>
+
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form runat="server" enctype="multipart/form-data">
+ 
+      
+            <asp:ScriptManager ID="ScriptManager1" runat="server" EnableHistory ="true">
+     <Scripts>
+            <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=272931&clcid=0x409 --%>
+            <%--Framework scripts--%>
+            <asp:ScriptReference Name="MsAjaxBundle" />
+            <asp:ScriptReference Name="jquery"  ScriptMode ="Auto"/>
+            <asp:ScriptReference Name="jquery.ui.combined" />
+            <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+            <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+            <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+            <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+            <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+            <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+            <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+            <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+            <asp:ScriptReference Name="WebFormsBundle" />
+  <%--          <asp:ScriptReference Name="Bootstrap" Path="~/Content/bootstrap.min.css" />
+            <asp:ScriptReference Name="BSJavaScripts" Path="~Scripts/jquery-2.1.4.min.js" />
+            <asp:ScriptReference Name="BSJS2" Path="~Scripts/bootstrap.min.js" />--%>
+    
+            <%--Site scripts--%>
+
+        </Scripts> 
+    </asp:ScriptManager>
+        <style>
+            .StandardTable{
+                border-style:none!important;
+                border-width:0px!important;
+            }
+
+        </style>
+    <header>
+       <div class="content-wrapper" >         
+       <div  class="float-left"  style=" background-color:#6da9e3; width:100%; height:102px;"> 
+            <cc1:DropShadowExtender ID="DropShadowExtender2" runat="server" TargetControlID ="HeaderContentWrapper"
+            Enabled ="true" Opacity ="25" Radius ="25"             />  
+           
+            <asp:panel Height ="100px" id="HeaderContentWrapper" runat ="server" BorderColor ="#003060" BorderWidth ="2px">  
+                    <asp:Panel runat ="server" Height="5px" ID="topbuffer"></asp:Panel>
+                    <a runat="server" href="~/Default.aspx" class ="site-title" >Northside Hospital Finance Division</a>  
+                    <asp:Label ID="lblWelcome" CssClass="username" runat="server" Text="" Font-Size ="Small"   ></asp:Label>
+                   <div  style=" float:right; padding-top:0px; padding-bottom:0px;  max-height:60px; max-width:585px; min-height:20px; padding-right: 5px; ">
+<section id="login">
+                        <asp:LoginView runat="server" ViewStateMode="Disabled">
+                            <AnonymousTemplate>
+                                <asp:Login ID="LoginUser" runat="server" EnableViewState="False"   
+                                    Style="white-space:nowrap; margin-bottom:0px; margin-top:0px; margin-left: 0px; margin-right: 0px"
+                                      Font-Size="x-Small" Orientation="Horizontal" RememberMeText="&nbsp;Remember Me&nbsp; "               
+                                      TitleText="" LoginButtonStyle-Font-Size="X-Small" LoginButtonStyle-Width ="50px" LoginButtonStyle-Height ="17px" 
+                                      TextLayout="TextOnLeft" FailureTextStyle-ForeColor="white" FailureTextStyle-Font-Bold="true" FailureTextStyle-Font-Size="Small"  > 
+                                        <LabelStyle Font-Size="Small" VerticalAlign="Top" Wrap ="false" Width ="40px" />
+                                        <CheckBoxStyle Wrap ="false" Font-Size ="Small" />
+                                        <TextBoxStyle Font-Size="8pt" Height ="12px" Width="80px" />                                        
+                                </asp:Login>
+                            </AnonymousTemplate>
+                         <LoggedInTemplate >                             
+                            <asp:LoginStatus Font-Size="Small" BorderColor="#003060" BorderWidth="1" runat="server" LogoutAction="Redirect" LogoutText="&nbsp;&nbsp;Logout&nbsp;&nbsp;" LogoutPageUrl="~/" />
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </section>
+                       
+
+                   </div>
+            <asp:Panel CssClass="Standard" runat="server" Width="1195px" style="padding-left:5px; "  >
+               <%-- <div style=" float:right; width: 180px; padding-right: 20px; padding-top: 10px; border-color:green; border-width:thin; ">--%>
+                <asp:Table runat="server" CssClass="StandardTable"  Width="100%" >
+                     <asp:TableRow>
+                        <asp:TableCell Width="5px"></asp:TableCell>
+                        <asp:TableCell>
+<asp:Menu ID="newMenu"  CssClass="MenuNavigation"  runat="server" DataSourceID="SiteMap" DynamicHorizontalOffset="2" Orientation="Horizontal" 
+                            EnableViewState="False" IncludeStyleBlock="False" >
+                           
+                         </asp:Menu>
+                        <asp:SiteMapDataSource ID="SiteMap" runat="server" ShowStartingNode="False" /> 
+                        </asp:TableCell>
+                        <asp:TableCell Width="180px">                           
+<a class="HeaderLinks" id="A2" href="https://financeweb.northside.local/FinanceHelpDesk/financehelpdesk.aspx" 
+                             runat="server" title="THIS IS NOT THE 'IS' HELP DESK">BIDS Help Desk</a>  
+           <asp:Label runat = "server" ForeColor ="#003060">&nbsp;|&nbsp;</asp:Label>
+                         <a class="HeaderLinks" id="A3" href="http://nsmweb/" target="_blank" runat="server">NSH Intranet</a> 
+                        </asp:TableCell>
+                    </asp:TableRow>
+                </asp:Table>
+                      
+              <%--  </div>--%>
+                <br />
+                <%--<asp:Panel runat="server" Height="1px"></asp:Panel>--%>
+                        
+
+
+                </asp:Panel>
+             </asp:panel> 
+                 <%--       <cc1:DropShadowExtender ID="DropShadowExtender1" runat="server" TargetControlID ="HeaderContentWrapper"
+            Enabled ="true" Opacity ="25" Radius ="25"             />  --%>
+
+       </div>
+                        
+          
+            
+        </div> 
+
+    </header>
+        <asp:Panel runat="server" CssClass="content-wrapper main-content clear-fix" BackColor="#CBE3FB" BorderColor="#003060" BorderStyle="Solid" BorderWidth="1px" > 
+  <%-- <div id="body" style=" background-color:#CBE3FB; " class="content-wrapper main-content clear-fix" >
+       <div id="breadCrumb">--%>
+           <asp:Table runat="server">
+               <asp:TableRow>
+                   <asp:TableCell Height="2px"></asp:TableCell>
+               </asp:TableRow>
+               <asp:TableRow>
+                   <asp:TableCell>
+  <asp:SiteMapPath ID="SiteMap1" runat="server" EnableViewState ="true" 
+                  RenderCurrentNodeAsLink="True" >
+            </asp:SiteMapPath>
+                   </asp:TableCell>
+               </asp:TableRow>
+           </asp:Table>      
+          
+           <%--</div>--%>
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent"  />
+           
+       <%-- <section class="content-wrapper main-content clear-fix">--%>
+            <asp:ContentPlaceHolder runat="server" ID="MainContent"  />
+       <%-- </section>--%>
+ <%--   </div>--%>
+        </asp:Panel>
+ 
+     </form>   
+        <footer class="controlfoot">
+
+                    <div class="content-wrapper" >         
+            <div  class="float-left"  style=" background-color:#6da9e3; width:100%; height:44px;">
+               <asp:Panel Height ="40px" id="FooterContentWrapper" runat ="server" BorderColor ="#003060" BorderWidth ="2px">
+                    <asp:Panel runat ="server" Height="10px" ID="Panel2"></asp:Panel>
+
+                    <asp:Panel runat="server" Width="1195px" style="padding-left:5px; color:black; " >
+
+             &copy;2017 - Northside Hospital  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            &nbsp; &nbsp; &nbsp; &nbsp; 
+            Please contact the BIDS Team (404-255-5278) 
+            with your questions, comments, and suggestions about this website. 
+
+                </asp:Panel>
+               </asp:Panel>
+            </div>
+                      
+          
+            
+        </div>
+
+        </footer>
+
+</body>
+</html>

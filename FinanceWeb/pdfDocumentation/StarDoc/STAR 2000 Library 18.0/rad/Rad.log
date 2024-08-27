@@ -1,0 +1,24 @@
+6/29/2012 5:02:21 PM : Starting purge of Index : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rad\Rad.pdx
+6/29/2012 5:02:21 PM : Deleting files from current index
+6/29/2012 5:02:21 PM : Deleting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rad\Rad\index.idx
+6/29/2012 5:02:21 PM : Deleting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rad\Rad\index1.idx
+6/29/2012 5:02:21 PM : Index purge successful
+
+6/29/2012 5:02:50 PM : Starting build of Index : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rad\Rad.pdx
+6/29/2012 5:02:50 PM : Searching : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rad\
+6/29/2012 5:03:01 PM : Indexing 7 files
+6/29/2012 5:03:01 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rad\Radapps.pdf
+6/29/2012 5:04:01 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rad\Radhl7.pdf
+6/29/2012 5:04:04 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rad\Radmmhl7.pdf
+6/29/2012 5:04:07 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rad\Radspch.pdf
+6/29/2012 5:04:10 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rad\Radws.pdf
+6/29/2012 5:04:22 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rad\Radgenin.pdf
+6/29/2012 5:04:44 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rad\Radmaint.pdf
+6/29/2012 5:05:35 PM : Creating Index
+6/29/2012 5:09:18 PM :   Total PDF files in all directories : 7
+6/29/2012 5:09:18 PM :   Total PDF attachments : 0
+6/29/2012 5:09:18 PM :   Total new files : 7
+6/29/2012 5:09:18 PM :   Total pages indexed : 2666
+6/29/2012 5:09:18 PM :   Total number of files skipped : 0
+6/29/2012 5:09:18 PM :   Total deleted files : 0
+6/29/2012 5:09:18 PM : Index build successful.

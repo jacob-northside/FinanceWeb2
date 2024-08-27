@@ -1,0 +1,37 @@
+6/29/2012 4:01:07 PM : Starting purge of Index : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Patacct.pdx
+6/29/2012 4:01:07 PM : Deleting files from current index
+6/29/2012 4:01:07 PM : Deleting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Patacct\index.idx
+6/29/2012 4:01:07 PM : Deleting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Patacct\index1.idx
+6/29/2012 4:01:08 PM : Index purge successful
+
+6/29/2012 4:01:46 PM : Starting build of Index : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Patacct.pdx
+6/29/2012 4:01:46 PM : Searching : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\
+6/29/2012 4:02:42 PM : Indexing 20 files
+6/29/2012 4:02:43 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Pabcec.pdf
+6/29/2012 4:02:47 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Pacanclm.pdf
+6/29/2012 4:03:12 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Panova.pdf
+6/29/2012 4:03:23 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Paontari.pdf
+6/29/2012 4:03:29 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Pahcp.pdf
+6/29/2012 4:03:31 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Paprecol.pdf
+6/29/2012 4:03:35 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Paactran.pdf
+6/29/2012 4:04:04 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Pabillcl.pdf
+6/29/2012 4:04:49 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Pafollow.pdf
+6/29/2012 4:05:14 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Paecca.pdf
+6/29/2012 4:05:17 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Papds.pdf
+6/29/2012 4:05:48 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Patrend.pdf
+6/29/2012 4:07:04 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Patables.pdf
+6/29/2012 4:08:08 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Papcmint.pdf
+6/29/2012 4:08:38 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Paaccinq.pdf
+6/29/2012 4:09:16 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Pageninf.pdf
+6/29/2012 4:09:53 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Paelec.pdf
+6/29/2012 4:10:21 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Parprts.pdf
+6/29/2012 4:11:54 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Paws.pdf
+6/29/2012 4:12:36 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\patacct\Paenhsum.pdf
+6/29/2012 4:12:39 PM : Creating Index
+6/29/2012 4:26:52 PM :   Total PDF files in all directories : 20
+6/29/2012 4:26:52 PM :   Total PDF attachments : 0
+6/29/2012 4:26:52 PM :   Total new files : 20
+6/29/2012 4:26:52 PM :   Total pages indexed : 7077
+6/29/2012 4:26:52 PM :   Total number of files skipped : 0
+6/29/2012 4:26:52 PM :   Total deleted files : 0
+6/29/2012 4:26:52 PM : Index build successful.

@@ -1,0 +1,31 @@
+6/29/2012 5:10:47 PM : Starting purge of Index : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rx\Rx.pdx
+6/29/2012 5:10:47 PM : Deleting files from current index
+6/29/2012 5:10:47 PM : Index purge successful
+
+6/29/2012 5:11:19 PM : Starting build of Index : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rx\Rx.pdx
+6/29/2012 5:11:19 PM : Searching : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rx\
+6/29/2012 5:11:46 PM : Indexing 16 files
+6/29/2012 5:11:46 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rx\Rxconn.pdf
+6/29/2012 5:11:51 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rx\Rxambu.pdf
+6/29/2012 5:12:18 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rx\Rxatc.pdf
+6/29/2012 5:12:20 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rx\Rxecono.pdf
+6/29/2012 5:12:24 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rx\Rxenhsum.pdf
+6/29/2012 5:12:26 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rx\Rxgenapp.pdf
+6/29/2012 5:13:13 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rx\Rxgener.pdf
+6/29/2012 5:13:17 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rx\Rxgeninf.pdf
+6/29/2012 5:13:34 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rx\Rxinpat.pdf
+6/29/2012 5:14:25 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rx\Rxkin.pdf
+6/29/2012 5:14:29 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rx\Rxmicro.pdf
+6/29/2012 5:14:31 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rx\Rxpharm.pdf
+6/29/2012 5:14:37 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rx\Rxpyxis.pdf
+6/29/2012 5:14:48 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rx\Rxsure.pdf
+6/29/2012 5:14:53 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rx\Rxtables.pdf
+6/29/2012 5:15:25 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\rx\Rxws.pdf
+6/29/2012 5:15:35 PM : Creating Index
+6/29/2012 5:22:55 PM :   Total PDF files in all directories : 16
+6/29/2012 5:22:55 PM :   Total PDF attachments : 0
+6/29/2012 5:22:55 PM :   Total new files : 16
+6/29/2012 5:22:55 PM :   Total pages indexed : 4384
+6/29/2012 5:22:55 PM :   Total number of files skipped : 0
+6/29/2012 5:22:55 PM :   Total deleted files : 0
+6/29/2012 5:22:55 PM : Index build successful.

@@ -1,0 +1,35 @@
+6/29/2012 3:28:46 PM : Starting purge of Index : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\lab\Lab.pdx
+6/29/2012 3:28:46 PM : Deleting files from current index
+6/29/2012 3:28:46 PM : Deleting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\lab\Lab\index.idx
+6/29/2012 3:28:46 PM : Deleting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\lab\Lab\index1.idx
+6/29/2012 3:28:46 PM : Index purge successful
+
+6/29/2012 3:29:16 PM : Starting purge of Index : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\lab\Lab.pdx
+6/29/2012 3:29:16 PM : Deleting files from current index
+6/29/2012 3:29:16 PM : Index purge successful
+
+6/29/2012 3:29:45 PM : Starting build of Index : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\lab\Lab.pdx
+6/29/2012 3:29:45 PM : Searching : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\lab\
+6/29/2012 3:30:25 PM : Indexing 14 files
+6/29/2012 3:30:25 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\lab\Labadvmm.pdf
+6/29/2012 3:31:41 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\lab\Labcb.pdf
+6/29/2012 3:31:57 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\lab\Labga1.pdf
+6/29/2012 3:33:33 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\lab\Labga2.pdf
+6/29/2012 3:34:56 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\lab\Labgiv.pdf
+6/29/2012 3:35:12 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\lab\Labhl7bb.pdf
+6/29/2012 3:35:28 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\lab\Labinfo.pdf
+6/29/2012 3:35:38 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\lab\Labmain1.pdf
+6/29/2012 3:37:38 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\lab\Labmain2.pdf
+6/29/2012 3:40:17 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\lab\Labmntws.pdf
+6/29/2012 3:41:21 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\lab\Labmodws.pdf
+6/29/2012 3:41:26 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\lab\Labreflb.pdf
+6/29/2012 3:42:09 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\lab\Labanatp.pdf
+6/29/2012 3:43:01 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\lab\Labadvbb.pdf
+6/29/2012 3:43:07 PM : Creating Index
+6/29/2012 3:58:55 PM :   Total PDF files in all directories : 14
+6/29/2012 3:58:55 PM :   Total PDF attachments : 0
+6/29/2012 3:58:55 PM :   Total new files : 14
+6/29/2012 3:58:55 PM :   Total pages indexed : 6598
+6/29/2012 3:58:55 PM :   Total number of files skipped : 0
+6/29/2012 3:58:55 PM :   Total deleted files : 0
+6/29/2012 3:58:55 PM : Index build successful.

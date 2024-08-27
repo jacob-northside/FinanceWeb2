@@ -1,0 +1,27 @@
+6/29/2012 5:41:23 PM : Starting purge of Index : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\systems\Systems.pdx
+6/29/2012 5:41:23 PM : Deleting files from current index
+6/29/2012 5:41:23 PM : Deleting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\systems\Systems\index.idx
+6/29/2012 5:41:24 PM : Deleting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\systems\Systems\index1.idx
+6/29/2012 5:41:24 PM : Index purge successful
+
+6/29/2012 5:41:52 PM : Starting build of Index : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\systems\Systems.pdx
+6/29/2012 5:41:52 PM : Searching : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\systems\
+6/29/2012 5:42:16 PM : Indexing 10 files
+6/29/2012 5:42:17 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\systems\Ssallstr.pdf
+6/29/2012 5:42:25 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\systems\Ssaudit.pdf
+6/29/2012 5:42:33 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\systems\Sscust.pdf
+6/29/2012 5:42:43 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\systems\Ssfaxins.pdf
+6/29/2012 5:42:45 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\systems\Sshbowem.pdf
+6/29/2012 5:42:52 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\systems\Ssmse.pdf
+6/29/2012 5:43:16 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\systems\Sssql.pdf
+6/29/2012 5:43:56 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\systems\Sssqles.pdf
+6/29/2012 5:43:59 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\systems\Ssyses.pdf
+6/29/2012 5:44:00 PM : Extracting : M:\STAR_Doc\Delivered Files - DOC USE ONLY\stdoc18.0\systems\Ssnavu.pdf
+6/29/2012 5:44:23 PM : Creating Index
+6/29/2012 5:46:48 PM :   Total PDF files in all directories : 10
+6/29/2012 5:46:48 PM :   Total PDF attachments : 0
+6/29/2012 5:46:48 PM :   Total new files : 10
+6/29/2012 5:46:48 PM :   Total pages indexed : 2200
+6/29/2012 5:46:48 PM :   Total number of files skipped : 0
+6/29/2012 5:46:48 PM :   Total deleted files : 0
+6/29/2012 5:46:48 PM : Index build successful.

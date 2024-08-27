@@ -1,0 +1,1645 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{7C96524B-191F-4B17-B83B-5EB408EB8650}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FinanceWeb</RootNamespace>
+    <AssemblyName>FinanceWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>FinanceWeb.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>FinanceWeb.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=16.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.16.1.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery, Version=2.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.2.1.4\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery.UI.Combined, Version=1.11.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.UI.Combined.1.11.4\lib\net45\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.76.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.76.0\lib\net40-client\ClosedXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.3.4.13329\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.3.4.13329\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.3.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.3.4.13329\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Membership.OpenAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Membership.OpenAuth.2.0.1\lib\net45\Microsoft.AspNet.Membership.OpenAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.OOXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.OpenXml4Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.1.3.1, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.1.3.1\lib\net40\NPOI.OpenXmlFormats.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Spotfire.Dxp.Application">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 12.0\SDK\TIBCO\Binaries\Spotfire.Dxp.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Spotfire.Dxp.Automation.Framework">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 12.0\SDK\TIBCO\Binaries\Spotfire.Dxp.Automation.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Spotfire.Dxp.Data">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 12.0\SDK\TIBCO\Binaries\Spotfire.Dxp.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Spotfire.Dxp.Data.Formats.Sbdf">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 12.0\SDK\TIBCO\Binaries\Spotfire.Dxp.Data.Formats.Sbdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Spotfire.Dxp.Data.Formats.Stdf">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 12.0\SDK\TIBCO\Binaries\Spotfire.Dxp.Data.Formats.Stdf.dll</HintPath>
+    </Reference>
+    <Reference Include="Spotfire.Dxp.Deployment">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 12.0\SDK\TIBCO\Binaries\Spotfire.Dxp.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="Spotfire.Dxp.Forms">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 12.0\SDK\TIBCO\Binaries\Spotfire.Dxp.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Spotfire.Dxp.Framework">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 12.0\SDK\TIBCO\Binaries\Spotfire.Dxp.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Spotfire.Dxp.Internal">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 12.0\SDK\TIBCO\Binaries\Spotfire.Dxp.Internal.dll</HintPath>
+    </Reference>
+    <Reference Include="Spotfire.Dxp.Services">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 12.0\SDK\TIBCO\Binaries\Spotfire.Dxp.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="Spotfire.Dxp.Web">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 12.0\SDK\TIBCO\Binaries\Spotfire.Dxp.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Extensions, Version=2.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives, Version=4.2.29.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.29\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.2.0.0\lib\net40\System.Web.Providers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.Routing" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Manage.aspx" />
+    <Content Include="Account\OpenAuthProviders.ascx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\RegisterExternalLogin.aspx" />
+    <Content Include="Applications\Applications.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\accordion.css" />
+    <Content Include="Content\themes\base\all.css" />
+    <Content Include="Content\themes\base\autocomplete.css" />
+    <Content Include="Content\themes\base\base.css" />
+    <Content Include="Content\themes\base\button.css" />
+    <Content Include="Content\themes\base\core.css" />
+    <Content Include="Content\themes\base\datepicker.css" />
+    <Content Include="Content\themes\base\dialog.css" />
+    <Content Include="Content\themes\base\draggable.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\menu.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\progressbar.css" />
+    <Content Include="Content\themes\base\resizable.css" />
+    <Content Include="Content\themes\base\selectable.css" />
+    <Content Include="Content\themes\base\selectmenu.css" />
+    <Content Include="Content\themes\base\slider.css" />
+    <Content Include="Content\themes\base\sortable.css" />
+    <Content Include="Content\themes\base\spinner.css" />
+    <Content Include="Content\themes\base\tabs.css" />
+    <Content Include="Content\themes\base\theme.css" />
+    <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Content\themes\Icon.dib" />
+    <Content Include="DefaultDev.aspx" />
+    <Content Include="Departments\Departments.aspx" />
+    <Content Include="Departments\FinancialSystemsIntegration.aspx" />
+    <Content Include="FinanceHelpDesk\financehelpdesk.aspx" />
+    <Content Include="FinanceHelpDesk\FinanceHelpDeskCaseAttachments.aspx" />
+    <Content Include="FinanceHelpDesk\FinanceHelpDeskCaseListing.aspx" />
+    <Content Include="FinanceHelpDesk\FinanceHelpDeskInstructions.aspx" />
+    <Content Include="FinanceHelpDesk\Images\AdminDashboardImage1.png" />
+    <Content Include="FinanceHelpDesk\Images\AdminDashboardImage2.png" />
+    <Content Include="FinanceHelpDesk\Images\AdminDashboardImage3.png" />
+    <Content Include="FinanceHelpDesk\Images\AdminDashboardImage4.png" />
+    <Content Include="FinanceHelpDesk\Images\AdminDashboardImage5.png" />
+    <Content Include="FinanceHelpDesk\Images\AdminDashboardImage6.png" />
+    <Content Include="FinanceHelpDesk\Images\AdminDashboardImage7.png" />
+    <Content Include="FinanceHelpDesk\Images\Administrative.png" />
+    <Content Include="FinanceHelpDesk\Images\ARDashboard.png" />
+    <Content Include="FinanceHelpDesk\Images\ARDashboard2.png" />
+    <Content Include="FinanceHelpDesk\Images\ARDashboard3.png" />
+    <Content Include="FinanceHelpDesk\Images\ARDashboard4.png" />
+    <Content Include="FinanceHelpDesk\Images\ARDashboardNav.png" />
+    <Content Include="FinanceHelpDesk\Images\ClipDarkOrange.bmp" />
+    <Content Include="FinanceHelpDesk\Images\ClipDarkRed.bmp" />
+    <Content Include="FinanceHelpDesk\Images\ClipDarkYellow.bmp" />
+    <Content Include="FinanceHelpDesk\Images\ClipLightOrange.bmp" />
+    <Content Include="FinanceHelpDesk\Images\ClipLightRed.bmp" />
+    <Content Include="FinanceHelpDesk\Images\ClipLightYellow.bmp" />
+    <Content Include="FinanceHelpDesk\Images\HourGlassDarkOrange.bmp" />
+    <Content Include="FinanceHelpDesk\Images\HourGlassDarkRed.bmp" />
+    <Content Include="FinanceHelpDesk\Images\HourGlassDarkYellow.bmp" />
+    <Content Include="FinanceHelpDesk\Images\HourGlassLightOrange.bmp" />
+    <Content Include="FinanceHelpDesk\Images\HourGlassLightRed.bmp" />
+    <Content Include="FinanceHelpDesk\Images\HourGlassLightYellow.bmp" />
+    <Content Include="FinanceHelpDesk\Images\OpenCasesImage1.png" />
+    <Content Include="FinanceHelpDesk\Images\OpenCasesImage2.png" />
+    <Content Include="FinanceHelpDesk\Images\OpenCasesImage3.png" />
+    <Content Include="FinanceHelpDesk\Images\SearchCasesImage1.png" />
+    <Content Include="FinanceHelpDesk\Images\SearchCasesImage2.png" />
+    <Content Include="FinanceHelpDesk\Images\SearchCasesImage3.png" />
+    <Content Include="FinanceHelpDesk\Images\SearchCasesImage4.png" />
+    <Content Include="FinanceHelpDesk\Images\UserDashboardImage1.png" />
+    <Content Include="FinanceHelpDesk\Images\UserDashboardImage2.png" />
+    <Content Include="FinanceHelpDesk\Images\UserProfileImage1.png" />
+    <Content Include="FinanceHelpDesk\Images\UserProfileImage2.png" />
+    <Content Include="FinanceHelpDesk\Images\UserProfileImage3.png" />
+    <Content Include="FinanceHelpDesk\Images\UserProfileImage4.png" />
+    <Content Include="FinanceHelpDesk\Images\UserProfileImage5.png" />
+    <Content Include="FinanceHelpDesk\Images\UserProfileImage6.png" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="FRED\dot-net-green.gif" />
+    <Content Include="FRED\FRED.aspx" />
+    <Content Include="FRED\FREDAdmin\FREDAdmin.aspx" />
+    <Content Include="FRED\FREDCubes.aspx" />
+    <Content Include="FRED\FREDFont2.png" />
+    <Content Include="FRED\FREDHQ\dot-net-green.gif" />
+    <Content Include="FRED\FREDHQ\FREDHQ.aspx" />
+    <Content Include="FRED\FREDHQ\FREDFont2.png" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\HomeImages\DevImages\134367900.png" />
+    <Content Include="Images\HomeImages\DevImages\171605160.png" />
+    <Content Include="Images\HomeImages\DevImages\477762599.png" />
+    <Content Include="Images\HomeImages\DevImages\542725761.png" />
+    <Content Include="Images\HomeImages\DevImages\667586499.png" />
+    <Content Include="Images\HomeImages\DevImages\NSH.png" />
+    <Content Include="Images\GreenPlus.png" />
+    <Content Include="Images\HomeImages\4122-05.jpg" />
+    <Content Include="Images\HomeImages\Northside_Night_Bankshot_72DPI.jpg" />
+    <Content Include="Images\Pacman-1.1s-200px.gif" />
+    <Content Include="Images\Pacman-2.2s-200px.gif" />
+    <Content Include="Images\RedMinus.png" />
+    <Content Include="Images\RyanCooperFooter.png" />
+    <Content Include="References\AddressGeoCoding\AddressGeoCoding.aspx" />
+    <Content Include="References\NZ_DataDictionary\ColumnLookup.aspx" />
+    <Content Include="References\NZ_DataDictionary\InsertColumnData.aspx" />
+    <Content Include="References\NZ_DataDictionary\Netezza Data Dictionary.aspx" />
+    <Content Include="References\NZ_DataDictionary\TESTNZDD.aspx" />
+    <Content Include="Scorecard\OHMSDataEntry.aspx" />
+    <Content Include="Scorecard\OHMSInstructions.aspx" />
+    <Content Include="Scorecard\OHMSRADDataEntry.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\gridviewScroll.min.js" />
+    <Content Include="Spotfire\FREDInstructions.aspx" />
+    <Content Include="Spotfire\Images\Calendar.bmp" />
+    <Content Include="Images\Close.png" />
+    <Content Include="Images\Construction2.gif" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\Open.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\SqCornflowerBlue.gif" />
+    <Content Include="obj\Netezza\NetezzaParamterSubmission.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="References\DataDictionary\DataDictionaryNew.aspx" />
+    <Content Include="References\DataDictionary\DictionaryEditor3.aspx" />
+    <Content Include="References\DataDictionary\web.config" />
+    <Content Include="References\web.config" />
+    <Content Include="Departments\web.config" />
+    <Content Include="FRED\web.config" />
+    <Content Include="FRED\FREDAdmin\web.config" />
+    <Content Include="FinanceHelpDesk\web.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="My Project\PublishProfiles\FinanceWeb.pubxml" />
+    <None Include="My Project\PublishProfiles\MFloyd.pubxml" />
+    <Content Include="References\BoardBooks.aspx" />
+    <Content Include="References\DataDictionary\DataDictionary.aspx" />
+    <Content Include="References\DataDictionary\DictionaryEditor.aspx" />
+    <Content Include="References\EducationMaterial.aspx" />
+    <Content Include="References\FDLookupTables.aspx" />
+    <Content Include="References\NorthsideForms.aspx" />
+    <Content Include="References\Reference.aspx" />
+    <Content Include="Scorecard\ExceptionReport.aspx" />
+    <Content Include="ScorecardFeedBack\OHMS_FeedbackHistory.aspx" />
+    <Content Include="Scorecard\FeedbackHistory.aspx" />
+    <Content Include="Scorecard\Images\OHMSMainPageInstructions.png" />
+    <Content Include="Scorecard\web.config" />
+    <Content Include="References\AddressGeoCoding\web.config" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.js" />
+    <Content Include="Scripts\jquery-ui-1.11.4.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Spotfire\ARSnapShotsInstructions.aspx" />
+    <Content Include="Spotfire\Images\ARDashboard.png" />
+    <Content Include="Spotfire\Images\ARDashboard2.png" />
+    <Content Include="Spotfire\Images\ARDashboard3.png" />
+    <Content Include="Spotfire\Images\ARDashboard4.png" />
+    <Content Include="Spotfire\Images\ARDashboardNav.png" />
+    <Content Include="Spotfire\Images\ARSnapShots1.png" />
+    <Content Include="Spotfire\Images\ARSnapShots2.png" />
+    <Content Include="Spotfire\Images\ARSnapShots3.png" />
+    <Content Include="Spotfire\Images\ARSnapShots4.png" />
+    <Content Include="Spotfire\Images\ARSnapShots5.png" />
+    <Content Include="Spotfire\Images\ARSnapShots6.png" />
+    <Content Include="Spotfire\Images\ARSnapShots7.png" />
+    <Content Include="Spotfire\Images\ARSnapShots8.png" />
+    <Content Include="Spotfire\Images\ARSnapShotsCustomBuckets1.png" />
+    <Content Include="Spotfire\Images\ARSnapShotsCustomBuckets2.png" />
+    <Content Include="Spotfire\Images\ARSnapShotsEncCompare1.png" />
+    <Content Include="Spotfire\Images\ARSnapShotsEncCompare2.png" />
+    <Content Include="Spotfire\Images\ARSnapShotsEncCompare3.png" />
+    <Content Include="Spotfire\Images\ARSnapShotsRawData1.png" />
+    <Content Include="Spotfire\Images\ARSnapShotsRawData2.png" />
+    <Content Include="Spotfire\Images\ARSnapShotsRawData3.png" />
+    <Content Include="Spotfire\Images\ARSnapShotsRawData4.png" />
+    <Content Include="Spotfire\Images\ARSnapShotsSSD.png" />
+    <Content Include="Spotfire\Images\ARSnapShotsVarCompare1.png" />
+    <Content Include="Spotfire\Images\ARSnapShotsVarCompare2.png" />
+    <Content Include="Spotfire\Images\ARSnapShotsVarCompare3.png" />
+    <Content Include="Spotfire\Images\ARSnapShotsVarCompare4.png" />
+    <Content Include="Spotfire\Images\ColumnSelection_3.bmp" />
+    <Content Include="Spotfire\Images\ColumnSelection_4.png" />
+    <Content Include="Spotfire\Images\ColumnSelection_5.bmp" />
+    <Content Include="Spotfire\Images\ColumnSelection_6.bmp" />
+    <Content Include="Spotfire\Images\ColumnSelection_7.png" />
+    <Content Include="Spotfire\Images\ColumnSelection_8.png" />
+    <Content Include="Spotfire\Images\ColumnSelection_9.png" />
+    <Content Include="Spotfire\Images\EditButton_1.bmp" />
+    <Content Include="Spotfire\Images\EditButton_2.bmp" />
+    <Content Include="Spotfire\Images\HowToAdjustTD.png" />
+    <Content Include="Spotfire\Images\Option2_10.png" />
+    <Content Include="Spotfire\Images\Option2_11.png" />
+    <Content Include="Spotfire\Images\Option2_12.png" />
+    <Content Include="Spotfire\Images\Option2_13.png" />
+    <Content Include="Spotfire\Images\Option2_14.png" />
+    <Content Include="Spotfire\Images\Rule1.png" />
+    <Content Include="Spotfire\Images\Rule2.png" />
+    <Content Include="Spotfire\Images\Rule3.png" />
+    <Content Include="Spotfire\Images\Rule4.png" />
+    <Content Include="Spotfire\Images\Rule5.png" />
+    <Content Include="Tools\AccessRequest\AccessRequestForm.aspx" />
+    <Content Include="Tools\Accounting\Armored Car Tracking\Armored Car Tracking.aspx" />
+    <Content Include="Tools\Accounting\Galen MQ Allocation\Medquest Allocation.aspx" />
+    <Content Include="Tools\Accounting\Payment_Transfer\PaymentTransfer.aspx" />
+    <Content Include="Tools\Accounting\Suntrust Allocation\Suntrust Allocation.aspx" />
+    <Content Include="Tools\ACR_Mammo\ACR_Mammo_Scripts.js" />
+    <Content Include="Tools\ACR_Mammo\FDA Mammo Image Review FAQ.aspx" />
+    <Content Include="Tools\ACR_Mammo\ImageReview.aspx" />
+    <Content Include="Tools\ACR_Mammo\FDA Mammo Image Review.aspx" />
+    <Content Include="Tools\AR\Activity_Report.aspx" />
+    <Content Include="Tools\AR\Activity_Report_History.aspx" />
+    <Content Include="Tools\AR\Activity_Report_Attachments.aspx" />
+    <Content Include="Tools\AR\Activity_Report_Instructions.aspx" />
+    <Content Include="Tools\AR\Images\ClipGreen.bmp" />
+    <Content Include="Tools\AR\Images\ClipLightBlue.bmp" />
+    <Content Include="Tools\AR_GECC\Images\ClipGreen.bmp" />
+    <Content Include="Tools\AR_GECC\Images\ClipLightBlue.bmp" />
+    <Content Include="Tools\AR_GECC\Images\ClipWhite.bmp" />
+    <Content Include="Tools\AR_GECC\Images\Png1.png" />
+    <Content Include="Tools\AR_GECC\Images\Png2.png" />
+    <Content Include="Tools\AR_GECC\Images\Png3.png" />
+    <Content Include="Tools\AR_GECC\Images\Png4.png" />
+    <Content Include="Tools\AR_GECC\Images\PngA.png" />
+    <Content Include="Tools\AR_GECC\Images\PngB.png" />
+    <Content Include="Tools\AR_PhysPract\Images\ClipTest.bmp" />
+    <Content Include="Tools\AR\Images\ClipWhite.bmp" />
+    <Content Include="Tools\AR\Images\Png1.png" />
+    <Content Include="Tools\AR\Images\Png2.png" />
+    <Content Include="Tools\AR\Images\Png3.png" />
+    <Content Include="Tools\AR\Images\Png4.png" />
+    <Content Include="Tools\AR\Images\PngA.png" />
+    <Content Include="Tools\AR\Images\PngB.png" />
+    <Content Include="Tools\AR_GECC\Activity Report.aspx" />
+    <Content Include="Tools\AR_GECC\AR GECC Attachments.aspx" />
+    <Content Include="Tools\AR_GECC\AR GECC History.aspx" />
+    <Content Include="Tools\AR_PhysPract\Images\PaperClip.png" />
+    <Content Include="Tools\AR_PhysPract\PP Activity Report Attachments.aspx" />
+    <Content Include="Tools\AR_PhysPract\PP Activity Report History.aspx" />
+    <Content Include="Tools\AR_PhysPract\PP Activity Report.aspx" />
+    <Content Include="Tools\CathLabMapping\CathLabMapping.aspx" />
+    <Content Include="Tools\Census\CensusDataEntry.aspx" />
+    <Content Include="Tools\ENT\ENT Data Entry.aspx" />
+    <Content Include="Tools\ENT\ENTDataEntry.aspx" />
+    <Content Include="Tools\FSIUsers\Radiology\RadiologyUpload.aspx" />
+    <Content Include="Tools\AR_GECC\Images\AR Daily Activity Report Procedure.pdf" />
+    <None Include="Tools\StarDeptMapping\StarDeptMapping.aspx" />
+    <Content Include="Tools\VendorContracts\Contract Management Policy.aspx" />
+    <Content Include="Tools\VendorContracts\LESCOR User Details.aspx" />
+    <Content Include="Tools\VendorContracts\LESCOR.aspx" />
+    <Content Include="Tools\LookupTables\LookupTableEditor.aspx" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\Image1.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\Image2.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\Image3.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\Image4.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\ProFeeTab1Image2.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\ProFeeTab1Image3.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\ProFeeTab1Image4.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\ProFeeTab2.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\ProFeeTab3Image1.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\ProFeeTab3Image2.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\ProFeeTab3Image3.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\ProFeeTab3Image4.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\ProFeeTab3Image5.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\ProFeeTab4Image1.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\ProFeeTab4Image2.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\ProFeeTab4Image3.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\ProFeeTab4Image4.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\ProFeeTab4Image5.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\ProFeeTab4Image6.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\ProFeeTab4Image7.png" />
+    <Content Include="Tools\MD\MDPOSImages\Image1.png" />
+    <Content Include="Tools\MD\MDPOSImages\Image2.png" />
+    <Content Include="Tools\MD\MDPOSImages\Image3.png" />
+    <Content Include="Tools\MD\MDPOSImages\Mapped1.png" />
+    <Content Include="Tools\MD\MDPOSImages\Mapped2.png" />
+    <Content Include="Tools\MD\MDPOSImages\Mapped3.png" />
+    <Content Include="Tools\MD\MDPOSImages\Mapped4.png" />
+    <Content Include="Tools\MD\MDPOSImages\Mapped5.png" />
+    <Content Include="Tools\MD\MDPOSImages\Mapped6.png" />
+    <Content Include="Tools\MD\POS Desc\MD POS Desc Mapping.aspx" />
+    <Content Include="Tools\MD\udMDPOSDescMappingInstructions.aspx" />
+    <Content Include="Tools\MD\PFOGroupMapping.aspx" />
+    <Content Include="Tools\MD\udMDPOSDescriptionMapping.aspx" />
+    <Content Include="Tools\MD\web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Tools\PPM\PhysicianPracticeManagementMapping.aspx" />
+    <Content Include="Tools\RadOHMS\RadOHMS_Administrative.aspx" />
+    <Content Include="Tools\Rehab\OHMS\Rehab OHMS Data Entry.aspx" />
+    <Content Include="Tools\Surgery\Surgery_TOT_DataEntry.aspx" />
+    <Content Include="Tools\TESTING_FOLDER\ActiveDirectoryTool.aspx" />
+    <Content Include="Tools\Administrative\ManageUsers.aspx" />
+    <Content Include="Tools\ErrorTracking\ErrorTracking.aspx" />
+    <Content Include="Tools\LookupTables\FDLookupTableEditor.aspx" />
+    <Content Include="Tools\ManagedCare\Profee\ProFee.aspx" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\galenImage1.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\galenImage2.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\galenImage3.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\galenImage4.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\galenImage5.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\GalenUpdates1.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\GalenUpdates2.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\GalenUpdates3.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\GalenUpdates4.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\Image1_old.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\Image2_old.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\Image3_old.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\Image4_old.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProfeeImages\Image5_old.png" />
+    <Content Include="Tools\ManagedCare\Profee\ProFeeInstructions.aspx" />
+    <Content Include="Tools\MediaCenter\MediaCenter.aspx" />
+    <Content Include="Tools\OHMS\OHMSAdmin\OHMS.aspx" />
+    <Content Include="Tools\OHMS\OHMSAdmin\OHMSAdmin.aspx" />
+    <Content Include="Tools\OHMS\OHMS_NewMetric.aspx" />
+    <Content Include="Tools\StarGLSubItems\StarGLBalancing.aspx" />
+    <Content Include="Tools\StarGLSubItems\StarGLBalancingSub.aspx" />
+    <Content Include="Tools\StarGLSubItems\StarGLJEEntries.aspx" />
+    <Content Include="Tools\StarGLSubItems\StarGLJEEntries2.aspx" />
+    <Content Include="Tools\EncounterFlags\EncounterLogic.aspx" />
+    <Content Include="Tools\TESTING_FOLDER\Test Page Ronin.aspx" />
+    <Content Include="Tools\TESTING_FOLDER\Test Page Samurai.aspx" />
+    <Content Include="Tools\TESTING_FOLDER\TestingFolder_Disclamer.aspx" />
+    <Content Include="Tools\Tools.aspx" />
+    <Content Include="Tools\Retired_VendorContracts_2_28_2020\Images\ClipDarkOrange.bmp" />
+    <Content Include="Tools\Retired_VendorContracts_2_28_2020\Images\ClipDarkRed.bmp" />
+    <Content Include="Tools\Retired_VendorContracts_2_28_2020\Images\ClipDarkYellow.bmp" />
+    <Content Include="Tools\Retired_VendorContracts_2_28_2020\Images\ClipLightOrange.bmp" />
+    <Content Include="Tools\Retired_VendorContracts_2_28_2020\Images\ClipLightRed.bmp" />
+    <Content Include="Tools\Retired_VendorContracts_2_28_2020\Images\ClipLightYellow.bmp" />
+    <Content Include="Tools\Retired_VendorContracts_2_28_2020\Images\HourGlassDarkOrange.bmp" />
+    <Content Include="Tools\Retired_VendorContracts_2_28_2020\Images\HourGlassDarkRed.bmp" />
+    <Content Include="Tools\Retired_VendorContracts_2_28_2020\Images\HourGlassDarkYellow.bmp" />
+    <Content Include="Tools\Retired_VendorContracts_2_28_2020\Images\HourGlassLightOrange.bmp" />
+    <Content Include="Tools\Retired_VendorContracts_2_28_2020\Images\HourGlassLightRed.bmp" />
+    <Content Include="Tools\Retired_VendorContracts_2_28_2020\Images\HourGlassLightYellow.bmp" />
+    <Content Include="Tools\Retired_VendorContracts_2_28_2020\LESCOR User Details.aspx" />
+    <Content Include="Tools\Retired_VendorContracts_2_28_2020\LESCOR_FAQ.aspx" />
+    <Content Include="Tools\Retired_VendorContracts_2_28_2020\VendorContractAttachments.aspx" />
+    <Content Include="Tools\Retired_VendorContracts_2_28_2020\LESCOR.aspx" />
+    <Content Include="Tools\WellsFargo\DelinquencySubmission.aspx" />
+    <Content Include="Tools\WellsFargo\CashPosting_Mapping.aspx" />
+    <Content Include="Tools\WellsFargo\WF_Merchant_Mapping.aspx" />
+    <Content Include="Tools\WellsFargo\WellsFargoImages\Admin1.png" />
+    <Content Include="Tools\WellsFargo\WellsFargoImages\Admin2.png" />
+    <Content Include="Tools\WellsFargo\WellsFargoImages\Admin3.png" />
+    <Content Include="Tools\WellsFargo\WellsFargoImages\Admin4.png" />
+    <Content Include="Tools\WellsFargo\WellsFargoImages\Admin5.png" />
+    <Content Include="Tools\WellsFargo\WellsFargoImages\DepositSlip.png" />
+    <Content Include="Tools\WellsFargo\WellsFargoImages\Image1.png" />
+    <Content Include="Tools\WellsFargo\WellsFargoImages\Image2.png" />
+    <Content Include="Tools\WellsFargo\WellsFargoImages\Image3.png" />
+    <Content Include="Tools\WellsFargo\WellsFargoImages\Image4.png" />
+    <Content Include="Tools\WellsFargo\WellsFargoImages\Image5.png" />
+    <Content Include="Tools\WellsFargo\WellsFargoImages\Image6.png" />
+    <Content Include="Tools\WellsFargo\WellsFargoImages\QuestionButton.png" />
+    <Content Include="Tools\WellsFargo\WFPPSDelinquency.aspx" />
+    <Content Include="Tools\WellsFargo\WFPPSInstructions.aspx" />
+    <Content Include="Tools\WellsFargo\WFPPS.aspx" />
+    <Content Include="UnderConstruction.aspx" />
+    <Content Include="Videos\WFPPS Instructional Video FIN.wmv" />
+    <Content Include="Videos\Wildlife.wmv" />
+    <Content Include="Bundle.config" />
+    <Content Include="Tools\Accounting\Suntrust Allocation\web.config" />
+    <Content Include="Tools\AR_GECC\web.config" />
+    <Content Include="Tools\MD\POS Desc\web.config" />
+    <Content Include="Tools\VendorContracts\Images\Contract Management Policy 3-6-20.pdf" />
+    <Content Include="Tools\VendorContracts\Images\LESCOR Presentation.pdf" />
+    <Content Include="Tools\AR_PhysPract\Images\PaperClip.pptx" />
+    <Content Include="Tools\AR_PhysPract\web.config" />
+    <None Include="Tools\StarDeptMapping\web.config" />
+    <Content Include="Tools\VendorContracts\Images\37101-Contract Management Policy.pdf" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
+    <None Include="Scripts\_references.js" />
+    <Content Include="Tools\web.config" />
+    <Content Include="Tools\Administrative\web.config" />
+    <Content Include="Tools\ManagedCare\Profee\web.config" />
+    <Content Include="Tools\ManagedCare\web.config" />
+    <Content Include="Tools\MediaCenter\web.config" />
+    <Content Include="Tools\OHMS\OHMSAdmin\web.config" />
+    <Content Include="Tools\OHMS\web.config" />
+    <Content Include="Tools\StarGLSubItems\web.config" />
+    <Content Include="Tools\TESTING_FOLDER\web.config" />
+    <Content Include="Tools\ErrorTracking\web.config" />
+    <Content Include="Tools\WellsFargo\web.config" />
+    <Content Include="Tools\EncounterFlags\web.config" />
+    <Content Include="Tools\LookupTables\web.config" />
+    <Content Include="SiteDev.Master" />
+    <Content Include="Tools\Surgery\web.config" />
+    <Content Include="Tools\Retired_VendorContracts_2_28_2020\web.config" />
+    <Content Include="Tools\AR\web.config" />
+    <Content Include="Tools\RadOHMS\Web.config" />
+    <Content Include="Tools\Census\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Tools\ACR_Mammo\Web.config" />
+    <Content Include="Tools\Retired_VendorContracts_2_28_2020\Images\FAQ for LESCOR.docx" />
+    <Content Include="Tools\Retired_VendorContracts_2_28_2020\Images\FAQ for LESCOR.pdf" />
+    <Content Include="Tools\PPM\web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Tools\ENT\web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Tools\ACR_Mammo\Images\FDA Mammo Image Review Instructions.pdf" />
+    <Content Include="Tools\AR\Images\AR Daily Activity Report Procedure.pdf" />
+    <Content Include="Tools\ACR_Mammo\Images\FDA Mammo Image Review Instructions 2.pdf" />
+    <Content Include="Tools\CathLabMapping\Web.config" />
+    <Content Include="Tools\Rehab\OHMS\web.config" />
+    <Content Include="Tools\Accounting\Galen MQ Allocation\web.config" />
+    <Content Include="Tools\VendorContracts\web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Applications\Applications.aspx.designer.vb">
+      <DependentUpon>Applications.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\Applications.aspx.vb">
+      <DependentUpon>Applications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.vb" />
+    <Compile Include="App_Start\AuthConfig.vb" />
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="About.aspx.designer.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="About.aspx.vb">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.vb">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Manage.aspx.designer.vb">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.vb">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\OpenAuthProviders.ascx.designer.vb">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.vb">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.vb">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.vb">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\RegisterExternalLogin.aspx.designer.vb">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="class\CreateExcelFile.vb" />
+    <Compile Include="class\NPOIExport.vb" />
+    <Compile Include="class\WebFinGlobal.vb" />
+    <Compile Include="Contact.aspx.designer.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DefaultDev.aspx.designer.vb">
+      <DependentUpon>DefaultDev.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultDev.aspx.vb">
+      <DependentUpon>DefaultDev.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\Departments.aspx.designer.vb">
+      <DependentUpon>Departments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\Departments.aspx.vb">
+      <DependentUpon>Departments.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Departments\FinancialSystemsIntegration.aspx.designer.vb">
+      <DependentUpon>FinancialSystemsIntegration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\FinancialSystemsIntegration.aspx.vb">
+      <DependentUpon>FinancialSystemsIntegration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinanceHelpDesk\financehelpdesk.aspx.designer.vb">
+      <DependentUpon>financehelpdesk.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceHelpDesk\financehelpdesk.aspx.vb">
+      <DependentUpon>financehelpdesk.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FinanceHelpDesk\FinanceHelpDeskCaseAttachments.aspx.designer.vb">
+      <DependentUpon>FinanceHelpDeskCaseAttachments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceHelpDesk\FinanceHelpDeskCaseAttachments.aspx.vb">
+      <DependentUpon>FinanceHelpDeskCaseAttachments.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FinanceHelpDesk\FinanceHelpDeskCaseListing.aspx.designer.vb">
+      <DependentUpon>FinanceHelpDeskCaseListing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceHelpDesk\FinanceHelpDeskCaseListing.aspx.vb">
+      <DependentUpon>FinanceHelpDeskCaseListing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FinanceHelpDesk\FinanceHelpDeskInstructions.aspx.designer.vb">
+      <DependentUpon>FinanceHelpDeskInstructions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FinanceHelpDesk\FinanceHelpDeskInstructions.aspx.vb">
+      <DependentUpon>FinanceHelpDeskInstructions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRED\FRED.aspx.designer.vb">
+      <DependentUpon>FRED.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRED\FRED.aspx.vb">
+      <DependentUpon>FRED.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRED\FREDAdmin\FREDAdmin.aspx.designer.vb">
+      <DependentUpon>FREDAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRED\FREDAdmin\FREDAdmin.aspx.vb">
+      <DependentUpon>FREDAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRED\FREDCubes.aspx.designer.vb">
+      <DependentUpon>FREDCubes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRED\FREDCubes.aspx.vb">
+      <DependentUpon>FREDCubes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FRED\FREDHQ\FREDHQ.aspx.designer.vb">
+      <DependentUpon>FREDHQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FRED\FREDHQ\FREDHQ.aspx.vb">
+      <DependentUpon>FREDHQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="obj\Netezza\NetezzaParamterSubmission.aspx.designer.vb">
+      <DependentUpon>NetezzaParamterSubmission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="obj\Netezza\NetezzaParamterSubmission.aspx.vb">
+      <DependentUpon>NetezzaParamterSubmission.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="References\AddressGeoCoding\AddressGeoCoding.aspx.designer.vb">
+      <DependentUpon>AddressGeoCoding.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="References\AddressGeoCoding\AddressGeoCoding.aspx.vb">
+      <DependentUpon>AddressGeoCoding.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="References\NZ_DataDictionary\ColumnLookup.aspx.designer.vb">
+      <DependentUpon>ColumnLookup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="References\NZ_DataDictionary\ColumnLookup.aspx.vb">
+      <DependentUpon>ColumnLookup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="References\NZ_DataDictionary\InsertColumnData.aspx.designer.vb">
+      <DependentUpon>InsertColumnData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="References\NZ_DataDictionary\InsertColumnData.aspx.vb">
+      <DependentUpon>InsertColumnData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="References\NZ_DataDictionary\Netezza Data Dictionary.aspx.designer.vb">
+      <DependentUpon>Netezza Data Dictionary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="References\NZ_DataDictionary\Netezza Data Dictionary.aspx.vb">
+      <DependentUpon>Netezza Data Dictionary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Scorecard\OHMSDataEntry.aspx.designer.vb">
+      <DependentUpon>OHMSDataEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Scorecard\OHMSDataEntry.aspx.vb">
+      <DependentUpon>OHMSDataEntry.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Scorecard\OHMSInstructions.aspx.designer.vb">
+      <DependentUpon>OHMSInstructions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Scorecard\OHMSInstructions.aspx.vb">
+      <DependentUpon>OHMSInstructions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Scorecard\OHMSRADDataEntry.aspx.designer.vb">
+      <DependentUpon>OHMSRADDataEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Scorecard\OHMSRADDataEntry.aspx.vb">
+      <DependentUpon>OHMSRADDataEntry.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SiteDev.Master.designer.vb">
+      <DependentUpon>SiteDev.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteDev.Master.vb">
+      <DependentUpon>SiteDev.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Spotfire\FREDInstructions.aspx.designer.vb">
+      <DependentUpon>FREDInstructions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Spotfire\FREDInstructions.aspx.vb">
+      <DependentUpon>FREDInstructions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="References\BoardBooks.aspx.designer.vb">
+      <DependentUpon>BoardBooks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="References\BoardBooks.aspx.vb">
+      <DependentUpon>BoardBooks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="References\DataDictionary\DataDictionaryNew.aspx.designer.vb">
+      <DependentUpon>DataDictionaryNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="References\DataDictionary\DataDictionaryNew.aspx.vb">
+      <DependentUpon>DataDictionaryNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="References\DataDictionary\DataDictionary.aspx.designer.vb">
+      <DependentUpon>DataDictionary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="References\DataDictionary\DataDictionary.aspx.vb">
+      <DependentUpon>DataDictionary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="References\DataDictionary\DictionaryEditor.aspx.designer.vb">
+      <DependentUpon>DictionaryEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="References\DataDictionary\DictionaryEditor.aspx.vb">
+      <DependentUpon>DictionaryEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="References\DataDictionary\DictionaryEditor3.aspx.designer.vb">
+      <DependentUpon>DictionaryEditor3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="References\DataDictionary\DictionaryEditor3.aspx.vb">
+      <DependentUpon>DictionaryEditor3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="References\EducationMaterial.aspx.designer.vb">
+      <DependentUpon>EducationMaterial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="References\EducationMaterial.aspx.vb">
+      <DependentUpon>EducationMaterial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="References\FDLookupTables.aspx.designer.vb">
+      <DependentUpon>FDLookupTables.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="References\FDLookupTables.aspx.vb">
+      <DependentUpon>FDLookupTables.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="References\NorthsideForms.aspx.designer.vb">
+      <DependentUpon>NorthsideForms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="References\NorthsideForms.aspx.vb">
+      <DependentUpon>NorthsideForms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="References\Reference.aspx.designer.vb">
+      <DependentUpon>Reference.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="References\Reference.aspx.vb">
+      <DependentUpon>Reference.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Scorecard\ExceptionReport.aspx.designer.vb">
+      <DependentUpon>ExceptionReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Scorecard\ExceptionReport.aspx.vb">
+      <DependentUpon>ExceptionReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ScorecardFeedBack\OHMS_FeedbackHistory.aspx.designer.vb">
+      <DependentUpon>OHMS_FeedbackHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ScorecardFeedBack\OHMS_FeedbackHistory.aspx.vb">
+      <DependentUpon>OHMS_FeedbackHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Scorecard\FeedbackHistory.aspx.designer.vb">
+      <DependentUpon>FeedbackHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Scorecard\FeedbackHistory.aspx.vb">
+      <DependentUpon>FeedbackHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.vb">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Spotfire\ARSnapShotsInstructions.aspx.designer.vb">
+      <DependentUpon>ARSnapShotsInstructions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Spotfire\ARSnapShotsInstructions.aspx.vb">
+      <DependentUpon>ARSnapShotsInstructions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\AccessRequest\AccessRequestForm.aspx.designer.vb">
+      <DependentUpon>AccessRequestForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\AccessRequest\AccessRequestForm.aspx.vb">
+      <DependentUpon>AccessRequestForm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\Accounting\Armored Car Tracking\Armored Car Tracking.aspx.designer.vb">
+      <DependentUpon>Armored Car Tracking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Accounting\Armored Car Tracking\Armored Car Tracking.aspx.vb">
+      <DependentUpon>Armored Car Tracking.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\Accounting\Galen MQ Allocation\Medquest Allocation.aspx.designer.vb">
+      <DependentUpon>Medquest Allocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Accounting\Galen MQ Allocation\Medquest Allocation.aspx.vb">
+      <DependentUpon>Medquest Allocation.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\Accounting\Payment_Transfer\PaymentTransfer.aspx.designer.vb">
+      <DependentUpon>PaymentTransfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Accounting\Payment_Transfer\PaymentTransfer.aspx.vb">
+      <DependentUpon>PaymentTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\Accounting\Suntrust Allocation\Suntrust Allocation.aspx.designer.vb">
+      <DependentUpon>Suntrust Allocation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Accounting\Suntrust Allocation\Suntrust Allocation.aspx.vb">
+      <DependentUpon>Suntrust Allocation.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\ACR_Mammo\FDA Mammo Image Review FAQ.aspx.designer.vb">
+      <DependentUpon>FDA Mammo Image Review FAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ACR_Mammo\FDA Mammo Image Review FAQ.aspx.vb">
+      <DependentUpon>FDA Mammo Image Review FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\ACR_Mammo\ImageReview.aspx.designer.vb">
+      <DependentUpon>ImageReview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ACR_Mammo\ImageReview.aspx.vb">
+      <DependentUpon>ImageReview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\ACR_Mammo\FDA Mammo Image Review.aspx.designer.vb">
+      <DependentUpon>FDA Mammo Image Review.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ACR_Mammo\FDA Mammo Image Review.aspx.vb">
+      <DependentUpon>FDA Mammo Image Review.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\AR\Activity_Report.aspx.designer.vb">
+      <DependentUpon>Activity_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\AR\Activity_Report.aspx.vb">
+      <DependentUpon>Activity_Report.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\AR\Activity_Report_History.aspx.designer.vb">
+      <DependentUpon>Activity_Report_History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\AR\Activity_Report_History.aspx.vb">
+      <DependentUpon>Activity_Report_History.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\AR\Activity_Report_Attachments.aspx.designer.vb">
+      <DependentUpon>Activity_Report_Attachments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\AR\Activity_Report_Attachments.aspx.vb">
+      <DependentUpon>Activity_Report_Attachments.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\AR\Activity_Report_Instructions.aspx.designer.vb">
+      <DependentUpon>Activity_Report_Instructions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\AR\Activity_Report_Instructions.aspx.vb">
+      <DependentUpon>Activity_Report_Instructions.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\AR_GECC\Activity Report.aspx.designer.vb">
+      <DependentUpon>Activity Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\AR_GECC\Activity Report.aspx.vb">
+      <DependentUpon>Activity Report.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\AR_GECC\AR GECC Attachments.aspx.designer.vb">
+      <DependentUpon>AR GECC Attachments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\AR_GECC\AR GECC Attachments.aspx.vb">
+      <DependentUpon>AR GECC Attachments.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\AR_GECC\AR GECC History.aspx.designer.vb">
+      <DependentUpon>AR GECC History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\AR_GECC\AR GECC History.aspx.vb">
+      <DependentUpon>AR GECC History.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\AR_PhysPract\PP Activity Report Attachments.aspx.designer.vb">
+      <DependentUpon>PP Activity Report Attachments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\AR_PhysPract\PP Activity Report Attachments.aspx.vb">
+      <DependentUpon>PP Activity Report Attachments.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\AR_PhysPract\PP Activity Report History.aspx.designer.vb">
+      <DependentUpon>PP Activity Report History.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\AR_PhysPract\PP Activity Report History.aspx.vb">
+      <DependentUpon>PP Activity Report History.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\AR_PhysPract\PP Activity Report.aspx.designer.vb">
+      <DependentUpon>PP Activity Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\AR_PhysPract\PP Activity Report.aspx.vb">
+      <DependentUpon>PP Activity Report.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\CathLabMapping\CathLabMapping.aspx.designer.vb">
+      <DependentUpon>CathLabMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\CathLabMapping\CathLabMapping.aspx.vb">
+      <DependentUpon>CathLabMapping.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\Census\CensusDataEntry.aspx.designer.vb">
+      <DependentUpon>CensusDataEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Census\CensusDataEntry.aspx.vb">
+      <DependentUpon>CensusDataEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\ENT\ENT Data Entry.aspx.designer.vb">
+      <DependentUpon>ENT Data Entry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ENT\ENT Data Entry.aspx.vb">
+      <DependentUpon>ENT Data Entry.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\ENT\ENTDataEntry.aspx.designer.vb">
+      <DependentUpon>ENTDataEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ENT\ENTDataEntry.aspx.vb">
+      <DependentUpon>ENTDataEntry.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\FSIUsers\Radiology\RadiologyUpload.aspx.designer.vb">
+      <DependentUpon>RadiologyUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\FSIUsers\Radiology\RadiologyUpload.aspx.vb">
+      <DependentUpon>RadiologyUpload.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\StarDeptMapping\StarDeptMapping.aspx.designer.vb">
+      <DependentUpon>StarDeptMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\StarDeptMapping\StarDeptMapping.aspx.vb">
+      <DependentUpon>StarDeptMapping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\VendorContracts\Contract Management Policy.aspx.designer.vb">
+      <DependentUpon>Contract Management Policy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\VendorContracts\Contract Management Policy.aspx.vb">
+      <DependentUpon>Contract Management Policy.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\VendorContracts\LESCOR User Details.aspx.designer.vb">
+      <DependentUpon>LESCOR User Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\VendorContracts\LESCOR User Details.aspx.vb">
+      <DependentUpon>LESCOR User Details.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\VendorContracts\LESCOR.aspx.designer.vb">
+      <DependentUpon>LESCOR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\VendorContracts\LESCOR.aspx.vb">
+      <DependentUpon>LESCOR.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\LookupTables\LookupTableEditor.aspx.designer.vb">
+      <DependentUpon>LookupTableEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\LookupTables\LookupTableEditor.aspx.vb">
+      <DependentUpon>LookupTableEditor.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\MD\POS Desc\MD POS Desc Mapping.aspx.designer.vb">
+      <DependentUpon>MD POS Desc Mapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\MD\POS Desc\MD POS Desc Mapping.aspx.vb">
+      <DependentUpon>MD POS Desc Mapping.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\MD\udMDPOSDescMappingInstructions.aspx.designer.vb">
+      <DependentUpon>udMDPOSDescMappingInstructions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\MD\udMDPOSDescMappingInstructions.aspx.vb">
+      <DependentUpon>udMDPOSDescMappingInstructions.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\MD\PFOGroupMapping.aspx.designer.vb">
+      <DependentUpon>PFOGroupMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\MD\PFOGroupMapping.aspx.vb">
+      <DependentUpon>PFOGroupMapping.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\MD\udMDPOSDescriptionMapping.aspx.designer.vb">
+      <DependentUpon>udMDPOSDescriptionMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\MD\udMDPOSDescriptionMapping.aspx.vb">
+      <DependentUpon>udMDPOSDescriptionMapping.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\PPM\PhysicianPracticeManagementMapping.aspx.designer.vb">
+      <DependentUpon>PhysicianPracticeManagementMapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\PPM\PhysicianPracticeManagementMapping.aspx.vb">
+      <DependentUpon>PhysicianPracticeManagementMapping.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\RadOHMS\RadOHMS_Administrative.aspx.designer.vb">
+      <DependentUpon>RadOHMS_Administrative.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\RadOHMS\RadOHMS_Administrative.aspx.vb">
+      <DependentUpon>RadOHMS_Administrative.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\Rehab\OHMS\Rehab OHMS Data Entry.aspx.designer.vb">
+      <DependentUpon>Rehab OHMS Data Entry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Rehab\OHMS\Rehab OHMS Data Entry.aspx.vb">
+      <DependentUpon>Rehab OHMS Data Entry.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\Surgery\Surgery_TOT_DataEntry.aspx.designer.vb">
+      <DependentUpon>Surgery_TOT_DataEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Surgery\Surgery_TOT_DataEntry.aspx.vb">
+      <DependentUpon>Surgery_TOT_DataEntry.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\TESTING_FOLDER\ActiveDirectoryTool.aspx.designer.vb">
+      <DependentUpon>ActiveDirectoryTool.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\TESTING_FOLDER\ActiveDirectoryTool.aspx.vb">
+      <DependentUpon>ActiveDirectoryTool.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\Administrative\ManageUsers.aspx.designer.vb">
+      <DependentUpon>ManageUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Administrative\ManageUsers.aspx.vb">
+      <DependentUpon>ManageUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\ErrorTracking\ErrorTracking.aspx.designer.vb">
+      <DependentUpon>ErrorTracking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ErrorTracking\ErrorTracking.aspx.vb">
+      <DependentUpon>ErrorTracking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\LookupTables\FDLookupTableEditor.aspx.designer.vb">
+      <DependentUpon>FDLookupTableEditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\LookupTables\FDLookupTableEditor.aspx.vb">
+      <DependentUpon>FDLookupTableEditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\ManagedCare\Profee\ProFee.aspx.designer.vb">
+      <DependentUpon>ProFee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ManagedCare\Profee\ProFee.aspx.vb">
+      <DependentUpon>ProFee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\ManagedCare\Profee\ProFeeInstructions.aspx.designer.vb">
+      <DependentUpon>ProFeeInstructions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\ManagedCare\Profee\ProFeeInstructions.aspx.vb">
+      <DependentUpon>ProFeeInstructions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\MediaCenter\MediaCenter.aspx.designer.vb">
+      <DependentUpon>MediaCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\MediaCenter\MediaCenter.aspx.vb">
+      <DependentUpon>MediaCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\OHMS\OHMSAdmin\OHMS.aspx.designer.vb">
+      <DependentUpon>OHMS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\OHMS\OHMSAdmin\OHMS.aspx.vb">
+      <DependentUpon>OHMS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\OHMS\OHMSAdmin\OHMSAdmin.aspx.designer.vb">
+      <DependentUpon>OHMSAdmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\OHMS\OHMSAdmin\OHMSAdmin.aspx.vb">
+      <DependentUpon>OHMSAdmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\OHMS\OHMS_NewMetric.aspx.designer.vb">
+      <DependentUpon>OHMS_NewMetric.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\OHMS\OHMS_NewMetric.aspx.vb">
+      <DependentUpon>OHMS_NewMetric.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\StarGLSubItems\StarGLBalancing.aspx.designer.vb">
+      <DependentUpon>StarGLBalancing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\StarGLSubItems\StarGLBalancing.aspx.vb">
+      <DependentUpon>StarGLBalancing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\StarGLSubItems\StarGLBalancingSub.aspx.designer.vb">
+      <DependentUpon>StarGLBalancingSub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\StarGLSubItems\StarGLBalancingSub.aspx.vb">
+      <DependentUpon>StarGLBalancingSub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\StarGLSubItems\StarGLJEEntries.aspx.designer.vb">
+      <DependentUpon>StarGLJEEntries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\StarGLSubItems\StarGLJEEntries.aspx.vb">
+      <DependentUpon>StarGLJEEntries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\StarGLSubItems\StarGLJEEntries2.aspx.designer.vb">
+      <DependentUpon>StarGLJEEntries2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\StarGLSubItems\StarGLJEEntries2.aspx.vb">
+      <DependentUpon>StarGLJEEntries2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\EncounterFlags\EncounterLogic.aspx.designer.vb">
+      <DependentUpon>EncounterLogic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\EncounterFlags\EncounterLogic.aspx.vb">
+      <DependentUpon>EncounterLogic.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\TESTING_FOLDER\Test Page Ronin.aspx.designer.vb">
+      <DependentUpon>Test Page Ronin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\TESTING_FOLDER\Test Page Ronin.aspx.vb">
+      <DependentUpon>Test Page Ronin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\TESTING_FOLDER\Test Page Samurai.aspx.designer.vb">
+      <DependentUpon>Test Page Samurai.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\TESTING_FOLDER\Test Page Samurai.aspx.vb">
+      <DependentUpon>Test Page Samurai.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\TESTING_FOLDER\TestingFolder_Disclamer.aspx.designer.vb">
+      <DependentUpon>TestingFolder_Disclamer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\TESTING_FOLDER\TestingFolder_Disclamer.aspx.vb">
+      <DependentUpon>TestingFolder_Disclamer.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\Tools.aspx.designer.vb">
+      <DependentUpon>Tools.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Tools.aspx.vb">
+      <DependentUpon>Tools.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\Retired_VendorContracts_2_28_2020\LESCOR User Details.aspx.designer.vb">
+      <DependentUpon>LESCOR User Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Retired_VendorContracts_2_28_2020\LESCOR User Details.aspx.vb">
+      <DependentUpon>LESCOR User Details.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\Retired_VendorContracts_2_28_2020\LESCOR_FAQ.aspx.designer.vb">
+      <DependentUpon>LESCOR_FAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Retired_VendorContracts_2_28_2020\LESCOR_FAQ.aspx.vb">
+      <DependentUpon>LESCOR_FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\Retired_VendorContracts_2_28_2020\VendorContractAttachments.aspx.designer.vb">
+      <DependentUpon>VendorContractAttachments.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Retired_VendorContracts_2_28_2020\VendorContractAttachments.aspx.vb">
+      <DependentUpon>VendorContractAttachments.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\Retired_VendorContracts_2_28_2020\LESCOR.aspx.designer.vb">
+      <DependentUpon>LESCOR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\Retired_VendorContracts_2_28_2020\LESCOR.aspx.vb">
+      <DependentUpon>LESCOR.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\WellsFargo\DelinquencySubmission.aspx.designer.vb">
+      <DependentUpon>DelinquencySubmission.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\WellsFargo\DelinquencySubmission.aspx.vb">
+      <DependentUpon>DelinquencySubmission.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\WellsFargo\CashPosting_Mapping.aspx.designer.vb">
+      <DependentUpon>CashPosting_Mapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\WellsFargo\CashPosting_Mapping.aspx.vb">
+      <DependentUpon>CashPosting_Mapping.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\WellsFargo\WF_Merchant_Mapping.aspx.designer.vb">
+      <DependentUpon>WF_Merchant_Mapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\WellsFargo\WF_Merchant_Mapping.aspx.vb">
+      <DependentUpon>WF_Merchant_Mapping.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\WellsFargo\WFPPSDelinquency.aspx.designer.vb">
+      <DependentUpon>WFPPSDelinquency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\WellsFargo\WFPPSDelinquency.aspx.vb">
+      <DependentUpon>WFPPSDelinquency.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Tools\WellsFargo\WFPPSInstructions.aspx.designer.vb">
+      <DependentUpon>WFPPSInstructions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\WellsFargo\WFPPSInstructions.aspx.vb">
+      <DependentUpon>WFPPSInstructions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tools\WellsFargo\WFPPS.aspx.designer.vb">
+      <DependentUpon>WFPPS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\WellsFargo\WFPPS.aspx.vb">
+      <DependentUpon>WFPPS.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="UnderConstruction.aspx.designer.vb">
+      <DependentUpon>UnderConstruction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UnderConstruction.aspx.vb">
+      <DependentUpon>UnderConstruction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.vb">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.vb">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.vb">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.vb">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="Site.Master" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="DownloadFiles\StarGL\Atlanta\" />
+    <Folder Include="DownloadFiles\StarGL\Cherokee\" />
+    <Folder Include="DownloadFiles\StarGL\Forsyth\" />
+    <Folder Include="FRED\FREDMQ\" />
+    <Folder Include="Scorecard\FeedBack\" />
+    <Folder Include="Scorecard\Instructions\" />
+    <Folder Include="Videos\UploadFiles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63107</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63109/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
